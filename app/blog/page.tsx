@@ -3,13 +3,14 @@ import blogData from "@/components/Blog/blogData";
 import Breadcrumb from "@/components/Common/Breadcrumb";
 
 import { Metadata } from "next";
+import React, { useEffect } from "react";
 
 export const metadata: Metadata = {
   title: "Trainings Page",
   description: "This is trainings page",
   // other metadata
 };
- 
+ <script type="javascript"></script>
 const Blog = () => {
   const videoPath = "/images/video/1.mp4"; // Update this path to the actual path where the video is located
 
@@ -20,12 +21,12 @@ const Blog = () => {
         description="Empower Your Team with Specialized Trainings for Data Processor,Data Controller and Data Security"
       />
 
-      <div className="video-container">
-        <video className="mx-auto w-1/2" width="800" height="500" controls>
-          <source src={videoPath} type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-      </div>
+<div className="video-container">
+    <video className="mx-auto w-1/2" width="800" height="500" controls autoplay muted loop>
+        <source src={videoPath} type="video/mp4" />
+        Your browser does not support the video tag.
+    </video>
+</div>
 
       <section className="pb-[20px] pt-[10px]">
         <div className="container">
@@ -107,5 +108,8 @@ const Blog = () => {
     </>
   );
 };
+
+
+
 
 export default Blog;
